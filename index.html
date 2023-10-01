@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskMaster - Task Management</title>
+    <!-- Add Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+
+<link rel="stylesheet" href="stylee.css">
+  </head>
+  <body style="background-color: burlywood">
+    <!-- Header -->
+    <div class="header">
+      <h1
+        style="
+          animation: moveRight 2s linear infinite alternate,
+            moveLeft 2s linear infinite alternate;
+        "
+      >
+        Task Management
+      </h1>
+    </div>
+
+    <!-- Main Content Container -->
+    <div class="container" style="background-color: cadetblue">
+      <h2>About TaskMaster</h2>
+      <p>
+        You're in the perfect spot to streamline and enhance the management of
+        your company's tasks, leading to improved productivity and organization.
+      </p>
+
+      <!-- Task Creation Form -->
+      <h3>Create a New Task</h3>
+      <form id="taskForm">
+        <!-- Form fields here as in your previous code -->
+        <div class="form-group">
+          <label for="taskName">Task Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="taskName"
+            placeholder="Enter task name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="taskDescription">Task Description</label>
+          <textarea
+            class="form-control"
+            id="taskDescription"
+            rows="3"
+            placeholder="Enter task description"
+          ></textarea>
+          <div class="form-group">
+            <label for="dueDate">Due Date</label>
+            <input
+              type="date"
+              class="form-control"
+              id="dueDate"
+            />
+          </div>
+          <div class="form-group">
+            <label for="assignToTeam">Assign to Team</label>
+            <select class="form-control" id="assignToTeam">
+              <option value="team1">Team 1</option>
+              <option value="team2">Team 2</option>
+              <!-- Add more teams here -->
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="assignToMember">Assign to Team Member</label>
+            <select class="form-control" id="assignToMember">
+              <!-- Options for team members will be dynamically generated based on the selected team -->
+              <option value="team1">Team Member 1</option>
+              <option value="team2">Team  Member 2</option>
+              <option value="team1">Team Member 3</option>
+              <option value="team2">Team  Member 4</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="priority">Priority</label>
+            <select class="form-control" id="priority">
+              <option>Low</option>
+              <option>Medium</option>
+              <option>High</option>
+            </select>
+          </div>
+        <button type="submit" class="btn btn-primary mt-4">Create Task</button>
+      </form>
+      <button id="toggleSidebar" class="btn btn-primary mt-4">
+        See the Task List
+      </button>
+
+      <button class="btn btn-danger clear-button mt-4" id="clearTaskList">
+        Clear Task List
+      </button>
+      <br> <br>
+      <a class="bg-dark text-white mt-5" href="collabration.html">Click for Team Collaboration</a>
+    </div>
+
+    <!-- Sidebar to display created tasks -->
+    <div
+      class="sidebar"
+      style="background-color: lightcyan"
+      id="taskListSidebar"
+    >
+      <h3>Task List</h3>
+      <ul id="taskList">
+        <!-- Tasks will be dynamically added here -->
+      </ul>
+    </div>
+    <div class="container text-black mt-4" style="background-color: azure">
+      <h2>Task Progress</h2>
+      <table class="table table-dark">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Team</th>
+            <th>Team Member</th>
+            <th>Task Progress</th>
+            <th>Due Date</th>
+            <th>Developer Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Team 1</td>
+            <td>Member 1</td>
+            <td>93%</td>
+            <td>2023-12-15</td>
+            <td>john doe</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Team 2</td>
+            <td>Member 2</td>
+            <td>10%</td>
+            <td>2022-10-20</td>
+            <td>allam channa</td>
+          </tr>
+          <!-- Add more rows with different task progress values -->
+          <div id="notification-container" class="alert alert-success" style="">
+            <strong>Reminder:</strong> Check the Task-List May be You have an
+            upcoming task!
+          </div>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Add Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src=script.js></script>
+  </body>
+</html>

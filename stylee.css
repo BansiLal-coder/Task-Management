@@ -1,0 +1,52 @@
+body {
+  background-color: #f8f9fa; /* Light gray background */
+}
+
+.header {
+  background-color: #007bff; /* Primary blue header background */
+  color: #fff; /* Text color for the header */
+  padding: 20px 0;
+  text-align: center;
+}
+
+.container {
+  background-color: #fff; /* White container background */
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+.sidebar {
+  background-color: #f8f9fa; /* Light gray sidebar background */
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  max-height: 400px; /* Set a maximum height for the sidebar */
+  overflow-y: auto; /* Add a scrollbar for vertical overflow */
+  position: fixed;
+  right: -300px; /* Start hidden to the right */
+  top: 0;
+  bottom: 0;
+  transition: right 0.3s; /* Add smooth sliding transition */
+}
+
+.show-sidebar {
+  right: 0; /* Show the sidebar by moving it to the right */
+}
+
+.header {
+  background-color: #343a40;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(-60%);
+  }
+  100% {
+    transform: translateX(20);
+  }
+}
